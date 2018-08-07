@@ -1,1 +1,1 @@
-PostgreSQL Dialer from [`cloudsql-proxy`](https://github.com/GoogleCloudPlatform/cloudsql-proxy) made as a public so that it can be used for [`pq`](https://github.com/lib/pq) listeners.
+PostgreSQL Dialer from [`cloudsql-proxy`](https://github.com/GoogleCloudPlatform/cloudsql-proxy) exposed so that it can be used for [`pq`](https://github.com/lib/pq) listeners.
