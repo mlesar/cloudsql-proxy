@@ -3,7 +3,7 @@ package connection
 import (
 	"context"
 	"database/sql"
-	"fmt"
+	"errors"
 
 	"github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/proxy"
 	goauth "golang.org/x/oauth2/google"
@@ -13,7 +13,7 @@ const sqlScope = "https://www.googleapis.com/auth/sqlservice.admin"
 
 func Open(ctx context.Context, driver, connStr string, jsonKey []byte) (*sql.DB, error) {
 	if connStr == "" {
-		return nil, fmt.Errorf("connection string is not set")
+		return nil, errors.New("connection string is not set")
 	}
 
 	if jsonKey != nil {
